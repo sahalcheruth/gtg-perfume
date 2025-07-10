@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GTG</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+.subscription-options {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.subscription-box {
+  border: 1px solid grey;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.subscription-box label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.details {
+  display: none;
+  margin-top: 10px;
+}
+
+.subscription-box.active .details {
+  display: block;
+}
+
+input[type="radio"] {
+  accent-color: #1C398E;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+button {
+  background-color: #1C398E;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart li {
+  background: #f2f2f2;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+</style>
+
+  </head>
+  <body class="body-wrapper786">
+
+
+
+
+
+
+
+<!-- mobile &tablet menu icon -->
+
+<div class="gtg-hamburger">
+ <header class="mobile-header  hamburger">
+  <div class="mobile-container">
+    <div class="mobile-logo">GTG</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <ul class="mobile-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Fragrances</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="#" class="mobile-btn">Shop Now</a>
+  </nav>
+</header>
+
+</div>
+
+
+
+    <!-- banner_image area -->
+    <section>
+      <!-- navigation bar -->
+
+      <div>
+        <img
+          src="assets/image/banner_img.png"
+          alt="banner_img"
+          class="banner-img"
+        />
+      </div>
+
+      <nav class="navbar">
+        <div class="nav-logo">GTG</div>
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li style="position: relative;left: 17px;"><a href="#shopnow">Shop</li> 
+          <img src="https://static.thenounproject.com/png/1123247-200.png" width="20px" style="position: relative; top: 2px;left: -10px;"></a>
+          <li><a href="#fragrances">Fragrances</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        
+        <div class="search-box" id="searchBox" style="display: none;">
+          <input class="search-box-input" type="text" placeholder="Search..." />
+      
+          
+        </div>
+        <div>
+          <i class="fas fa-search search-icon" id="searchIcon"></i>
+       <a href="#shopnow"><button type="button" class="nav-btn reveal-text scroll-reveal">Shop Now</button></a>
+      </nav>
+</div>
+   <div class="main-thumb">
+  <div class="award-box">
+    <img class="medal_icon" src="assets/image/medal_icon.png" width="30px" />
+    <p class="award-text">Awarded the best perfume in the world</p>
+  </div>
+
+  <div>
+    <h1 class="thumb-text reveal-text scroll-reveal">Live your best life.</h1>
+  </div>
+  <div class="thumb-text-2">
+    <div>
+    <h1 class="slide-in-right">10x</h1>
+     <br><h5 class="thumb-text-3 slide-in-left">power</h5></div>
+       <div><h1 class="slide-in-right">9</h1><br><h5 class="thumb-text-3 slide-in-left">ingredients</h5></div> 
+       <div><h1 class="slide-in-right">20k+</h1><br><h5 class="thumb-text-3 slide-in-left">happy customers</h5></div>
+
+
+  </div>
+
+  <a href="#shopnow"><button class="thumb-btn reveal-text scroll-reveal" type="button" id="#shopnow">Shop Now</button></a>
+ 
+</div>
+
+    </section>
+    <!-- subhead area -->
+<section>
+  
+<div class="sub-head">
+<div class="sub-head-content">
+
+  <!-- Guarantee Block -->
+
+  <div class="sub-head-display">
+    <svg width="43" height="37" viewBox="0 0 43 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.3594 0.638672C27.4875 0.638672 24.0975 2.30367 21.9844 5.11805C19.8713 2.30367 16.4812 0.638672 12.6094 0.638672C9.5273 0.642146 6.57245 1.86803 4.3931 4.04739C2.21374 6.22675 0.987849 9.1816 0.984375 12.2637C0.984375 25.3887 20.445 36.0124 21.2738 36.4512C21.4922 36.5687 21.7363 36.6302 21.9844 36.6302C22.2324 36.6302 22.4766 36.5687 22.695 36.4512C23.5237 36.0124 42.9844 25.3887 42.9844 12.2637C42.9809 9.1816 41.755 6.22675 39.5757 4.04739C37.3963 1.86803 34.4415 0.642146 31.3594 0.638672ZM21.9844 33.4137C18.5606 31.4187 3.98438 22.3305 3.98438 12.2637C3.98735 9.97709 4.89701 7.78502 6.51387 6.16816C8.13072 4.55131 10.3228 3.64165 12.6094 3.63867C16.2563 3.63867 19.3181 5.58117 20.5969 8.70117C20.7099 8.97629 20.9021 9.2116 21.1492 9.3772C21.3962 9.5428 21.687 9.63122 21.9844 9.63122C22.2818 9.63122 22.5725 9.5428 22.8196 9.3772C23.0666 9.2116 23.2589 8.97629 23.3719 8.70117C24.6506 5.57555 27.7125 3.63867 31.3594 3.63867C33.646 3.64165 35.838 4.55131 37.4549 6.16816C39.0717 7.78502 39.9814 9.97709 39.9844 12.2637C39.9844 22.3155 25.4044 31.4168 21.9844 33.4137Z" fill="currentColor"/>
+</svg>
+<h6 class="sub-head-text" style="position: relative;left: 5px;">30-day Guarantee</h6>
+
+</div>
+
+
+<!-- Shopping Block -->
+
+<div class="sub-head-display" style="position: relative;left: 47px;">
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.7344 0.638672C15.8776 0.638672 12.1075 1.78233 8.90076 3.92501C5.69401 6.0677 3.19464 9.11318 1.71873 12.6763C0.242824 16.2395 -0.143341 20.1603 0.609071 23.9429C1.36148 27.7256 3.21868 31.2001 5.9458 33.9273C8.67293 36.6544 12.1475 38.5116 15.9301 39.264C19.7128 40.0164 23.6336 39.6302 27.1967 38.1543C30.7599 36.6784 33.8054 34.1791 35.948 30.9723C38.0907 27.7655 39.2344 23.9954 39.2344 20.1387C39.2284 14.9688 37.1721 10.0123 33.5164 6.35667C29.8607 2.701 24.9043 0.644627 19.7344 0.638672ZM36.2344 20.1387C36.2357 21.6604 36.0256 23.1748 35.61 24.6387H28.3894C28.8494 21.6563 28.8494 18.621 28.3894 15.6387H35.61C36.0256 17.1025 36.2357 18.617 36.2344 20.1387ZM14.8594 27.6387H24.6094C23.6488 30.786 21.9813 33.6721 19.7344 36.0762C17.4883 33.6714 15.8209 30.7856 14.8594 27.6387ZM14.1281 24.6387C13.6131 21.6608 13.6131 18.6166 14.1281 15.6387H25.3556C25.8706 18.6166 25.8706 21.6608 25.3556 24.6387H14.1281ZM3.23438 20.1387C3.23308 18.617 3.44321 17.1025 3.85876 15.6387H11.0794C10.6194 18.621 10.6194 21.6563 11.0794 24.6387H3.85876C3.44321 23.1748 3.23308 21.6604 3.23438 20.1387ZM24.6094 12.6387H14.8594C15.8199 9.49131 17.4874 6.60526 19.7344 4.20117C21.9805 6.6059 23.6479 9.49174 24.6094 12.6387ZM34.4213 12.6387H27.7425C26.9007 9.55037 25.482 6.64931 23.5613 4.08867C25.882 4.64616 28.0547 5.69888 29.9305 7.17465C31.8063 8.65042 33.3407 10.5144 34.4288 12.6387H34.4213ZM15.9075 4.08867C13.9868 6.64931 12.568 9.55037 11.7263 12.6387H5.04001C6.12802 10.5144 7.66251 8.65042 9.5383 7.17465C11.4141 5.69888 13.5868 4.64616 15.9075 4.08867ZM5.04001 27.6387H11.7263C12.568 30.727 13.9868 33.628 15.9075 36.1887C13.5868 35.6312 11.4141 34.5785 9.5383 33.1027C7.66251 31.6269 6.12802 29.763 5.04001 27.6387ZM23.5613 36.1887C25.482 33.628 26.9007 30.727 27.7425 27.6387H34.4288C33.3407 29.763 31.8063 31.6269 29.9305 33.1027C28.0547 34.5785 25.882 35.6312 23.5613 36.1887Z" fill="currentColor"/>
+</svg>
+<h6 class="sub-head-text" style="position: relative;left: 5px;">Worldwide Shopping</h6>
+
+ </div>
+
+ <!-- Delivery Block -->
+
+<div class="sub-head-display" style="position: relative; left: 120px;">
+  <svg width="46" height="33" viewBox="0 0 46 33" fill="" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.3756 12.0762L42.7506 5.51367C42.5279 4.95843 42.1436 4.48285 41.6475 4.14855C41.1514 3.81424 40.5664 3.63661 39.9681 3.63867H33.4844V2.13867C33.4844 1.74085 33.3263 1.35932 33.045 1.07801C32.7637 0.796707 32.3822 0.638672 31.9844 0.638672H3.48438C2.68873 0.638672 1.92566 0.954742 1.36305 1.51735C0.800445 2.07996 0.484375 2.84302 0.484375 3.63867V24.6387C0.484375 25.4343 0.800445 26.1974 1.36305 26.76C1.92566 27.3226 2.68873 27.6387 3.48438 27.6387H6.67188C7.00233 28.9293 7.75293 30.0732 8.80534 30.8901C9.85776 31.707 11.1521 32.1504 12.4844 32.1504C13.8166 32.1504 15.111 31.707 16.1634 30.8901C17.2158 30.0732 17.9664 28.9293 18.2969 27.6387H27.6719C28.0023 28.9293 28.7529 30.0732 29.8053 30.8901C30.8578 31.707 32.1521 32.1504 33.4844 32.1504C34.8166 32.1504 36.111 31.707 37.1634 30.8901C38.2158 30.0732 38.9664 28.9293 39.2969 27.6387H42.4844C43.28 27.6387 44.0431 27.3226 44.6057 26.76C45.1683 26.1974 45.4844 25.4343 45.4844 24.6387V12.6387C45.4849 12.4459 45.448 12.2549 45.3756 12.0762ZM33.4844 6.63867H39.9681L41.7681 11.1387H33.4844V6.63867ZM3.48438 3.63867H30.4844V15.6387H3.48438V3.63867ZM12.4844 29.1387C11.891 29.1387 11.311 28.9627 10.8177 28.6331C10.3243 28.3034 9.9398 27.8349 9.71274 27.2867C9.48567 26.7385 9.42626 26.1353 9.54202 25.5534C9.65777 24.9715 9.9435 24.4369 10.3631 24.0174C10.7826 23.5978 11.3172 23.3121 11.8991 23.1963C12.481 23.0806 13.0842 23.14 13.6324 23.367C14.1806 23.5941 14.6491 23.9786 14.9788 24.472C15.3084 24.9653 15.4844 25.5453 15.4844 26.1387C15.4844 26.9343 15.1683 27.6974 14.6057 28.26C14.0431 28.8226 13.28 29.1387 12.4844 29.1387ZM27.6719 24.6387H18.2969C17.9664 23.348 17.2158 22.2041 16.1634 21.3872C15.111 20.5703 13.8166 20.1269 12.4844 20.1269C11.1521 20.1269 9.85776 20.5703 8.80534 21.3872C7.75293 22.2041 7.00233 23.348 6.67188 24.6387H3.48438V18.6387H30.4844V20.9468C29.7946 21.3455 29.1909 21.8771 28.7081 22.5108C28.2253 23.1446 27.8731 23.8678 27.6719 24.6387ZM33.4844 29.1387C32.891 29.1387 32.311 28.9627 31.8177 28.6331C31.3243 28.3034 30.9398 27.8349 30.7127 27.2867C30.4857 26.7385 30.4263 26.1353 30.542 25.5534C30.6578 24.9715 30.9435 24.4369 31.3631 24.0174C31.7826 23.5978 32.3172 23.3121 32.8991 23.1963C33.481 23.0806 34.0843 23.14 34.6324 23.367C35.1806 23.5941 35.6491 23.9786 35.9788 24.472C36.3084 24.9653 36.4844 25.5453 36.4844 26.1387C36.4844 26.9343 36.1683 27.6974 35.6057 28.26C35.0431 28.8226 34.28 29.1387 33.4844 29.1387ZM42.4844 24.6387H39.2969C38.9625 23.3512 38.2104 22.211 37.1586 21.3967C36.1068 20.5824 34.8146 20.1399 33.4844 20.1387V14.1387H42.4844V24.6387Z" fill="currentColor"/>
+</svg>
+<h6 class="sub-head-text" style="position: relative;left: 5px;">Fast Delivery</h6>
+</div>
+
+<!-- Eco Certified Block -->
+
+
+<div class="sub-head-display" style="right: -90px;position: relative;">
+  <svg width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.165 2.11767C45.1436 1.75071 44.9881 1.40439 44.7282 1.14446C44.4683 0.884536 44.122 0.729103 43.755 0.707673C34.05 0.145173 26.2575 3.09642 22.9087 8.62392C20.6962 12.2764 20.7 16.7164 22.8787 20.9502C21.6399 22.4238 20.7337 24.1474 20.2219 26.0033L17.1712 22.9508C18.6375 19.8889 18.5812 16.6958 16.9837 14.0464C14.5012 9.96267 8.78811 7.7633 1.69499 8.18892C1.32802 8.21035 0.981701 8.36579 0.721776 8.62571C0.46185 8.88564 0.306418 9.23196 0.284987 9.59892C-0.133138 16.692 2.05874 22.4052 6.14436 24.8802C7.49498 25.7046 9.04703 26.1399 10.6294 26.1383C12.1629 26.1194 13.6726 25.7561 15.0469 25.0752L19.7344 29.7627V35.1383C19.7344 35.5361 19.8924 35.9177 20.1737 36.199C20.455 36.4803 20.8365 36.6383 21.2344 36.6383C21.6322 36.6383 22.0137 36.4803 22.295 36.199C22.5763 35.9177 22.7344 35.5361 22.7344 35.1383V29.6089C22.7277 27.2226 23.5398 24.9062 25.035 23.0464C26.9643 24.0547 29.1039 24.5942 31.2806 24.6214C33.3851 24.6282 35.4505 24.0533 37.2487 22.9602C42.7762 19.6152 45.735 11.8227 45.165 2.11767ZM14.8706 20.6521L10.2937 16.077C10.0101 15.8076 9.63252 15.6596 9.24138 15.6646C8.85023 15.6696 8.47652 15.8273 8.19992 16.1039C7.92332 16.3805 7.76571 16.7542 7.7607 17.1453C7.75569 17.5365 7.90368 17.9141 8.17311 18.1977L12.75 22.7745C10.9481 23.3708 9.20061 23.2227 7.69874 22.3133C4.82249 20.5714 3.19499 16.4483 3.23436 11.1383C8.54249 11.0914 12.6675 12.7264 14.4094 15.6027C15.3187 17.1045 15.4669 18.852 14.8706 20.6521ZM35.6944 20.397C33.1819 21.9177 30.2287 22.0339 27.2287 20.772L37.2956 10.7033C37.5771 10.4221 37.7353 10.0406 37.7355 9.64271C37.7356 9.24484 37.5778 8.8632 37.2966 8.58174C37.0153 8.30027 36.6338 8.14205 36.236 8.14188C35.8381 8.1417 35.4565 8.29959 35.175 8.5808L25.1062 18.6383C23.8387 15.6383 23.9531 12.6833 25.4812 10.1727C28.095 5.86017 34.2937 3.46017 42.2306 3.64205C42.4106 11.577 40.0106 17.7833 35.6944 20.397Z" fill="currentColor"/>
+</svg>
+<h6 class="sub-head-text" style="position: relative;left: 5px;">Eco Certified</h6>
+</div>
+
+ 
+</div>
+</div>
+
+
+<div class="perfume-flavours">
+
+<div class="main">
+
+
+
+<!-- Flavours / Spray Images -->
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;" id="fragrances">
+
+  <figure style="text-align: center; top: 105px; left: 432px; position: relative;">
+    <img src="assets/image/rose_flavour.png" alt="Rose Flavour" width="69" height="59">
+    <figcaption class="flavours-name">Rose</figcaption>
+  </figure>
+
+
+
+ <figure style="text-align: center; position: relative; top: 80px; left: 530px;">
+    <img src="assets/image/lily.png" alt="Jasmin Flavour" width="54px" height="67px" style="transform: rotate(-45deg);" class="lazy-image slide-in-right">
+    <figcaption class="flavours-name reveal-text scroll-reveal">Lily</figcaption>
+  </figure>
+
+
+  <figure style="text-align: center;position: relative; top: 240px;left: 140px;">
+    <img src="assets/image/lily_flavour.png" alt="Lily Flavour" width="47" height="93px" style="transform: rotate(-45deg);">
+    <figcaption class="flavours-name reveal-text scroll-reveal">Lily</figcaption>
+  </figure>
+
+  <figure style="text-align: center; position: relative; top: 150px; left: 560px;">
+    <img src="assets/image/jasmin.png" alt="Jasmin Flavour" width="44px" height="67px">
+    <figcaption class="flavours-name reveal-text scroll-reveal">Jasmine</figcaption>
+  </figure>
+
+  <figure style="text-align: center;position: relative; top: 320px;left: 530px;">
+    <img src="assets/image/vannila.jpg" alt="Vanilla Flavour" width="76px" height="65px">
+    <figcaption class="flavours-name reveal-text scroll-reveal">Vanilla</figcaption>
+  </figure>
+
+  <figure style="text-align: center;position: relative; top: 520px;left: 390px;">
+    <img src="assets/image/levender.png" alt="Lavender Flavour" width="25" height="125px" style="transform: rotate(80deg)">
+    <figcaption class="flavours-name reveal-text scroll-reveal" style="position: relative;top: -40px;">Lavender</figcaption>
+  </figure>
+
+
+ <figure style="text-align: center;position: relative;top: 650px; left:120px;">
+    <img src="assets/image/rose_flavour.png" alt="Rose Flavour" width="69" height="59">
+    <figcaption class="flavours-name reveal-text scroll-reveal">Rose</figcaption>
+  </figure>
+
+
+  <figure style="text-align: center;position: relative; top: 580px;right: 180px;">
+    <img src="assets/image/tulip.png" alt="Tulip Flavour" width="50" height="82px">
+    <figcaption class="flavours-name reveal-text scroll-reveal">Tulip</figcaption>
+  </figure>
+
+  <figure style="text-align: center;position: relative;top: 400px; right: 360px;">
+    <img src="assets/image/tulip_2.png" alt="Tulip 2 Flavour" width="50px" height="86.74px" style="transform: rotate(-45deg);">
+    <figcaption class="flavours-name reveal-text scroll-reveal">Tulip</figcaption>
+  </figure>
+
+</div>
+
+
+<!-- spray image -->
+<img class="rose-spray-img" src="assets/image/rose.png" alt="rose_spray">  
+
+<!-- circle of image -->
+<div class="circle-wrapper" id="circleWrapper">
+
+
+  <img class="spray-img-background" src="assets/image/background _of_spray.png" alt="Spray Image" width="900PX">
+  
+  
+  <div class="dot dot1"></div>
+  <div class="dot dot2"></div>
+  <div class="dot dot3"></div>
+  <div class="dot dot4"></div>
+  <div class="dot dot5"></div>
+  <div class="dot dot6"></div>
+  <div class="dot dot7"></div>
+  <div class="dot dot8"></div>
+  <div class="dot dot9"></div>
+
+
+</div>
+
+
+</div>
+<!-- perfume flavours text area -->
+<div class="text-perfume">
+<h2 style="font-family:'Inter' ,sans-serif;font-weight: 300; font-size: 24px;line-height: 100%;letter-spacing: 3.03px;
+    background: linear-gradient(180deg, #828694 0%, #a5c4ac 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;font-style: li;">9 POWERFUL SCENTS</h2>
+
+<br>
+<div>
+  <h1 class="text-perfume-head reveal-text scroll-reveal ">All of the Best Ingredients,<br>None of the the Compromise</h1>
+<br>
+  <p class="text-perfume-para reveal-text scroll-reveal"> GTG delivers <span>10x longe-lasting fragrance  </span>with our<br>
+     advanced concentration formula-engineered for all- <br>day projection and exceptional sillage</p>
+</div>
+<br>
+<a href=""><button type="button" class="btn-view-fragrances reveal-text scroll-reveal">View All Fragrences</button></a>
+</div>
+
+</section>
+
+
+<!-- gtg perfumes gallery area -->
+<section class="sec-gly-sub">
+<div class="gtg-perfumes-slide">
+
+<div class="image-slider">
+  <img id="sliderImage" src="assets/image/spary5.png" alt="Gallery Image">
+
+  <!-- Arrows -->
+  <button class="arrow left" onclick="prevImage()">🡐</button>
+  <button class="arrow right" onclick="nextImage()">🡒</button>
+
+  <!-- Dot indicators -->
+  <div class="dots">
+    <span class="dotss" onclick="goToImage(0)"></span>
+    <span class="dotss" onclick="goToImage(1)"></span>
+    <span class="dotss" onclick="goToImage(2)"></span>
+    <span class="dotss" onclick="goToImage(3)"></span>
+  </div>
+</div>
+
+<div class="spray-items">
+  <img src="assets/image/spray1.jpg" alt="spray" class="reveal-text scroll-reveal">
+  <img src="assets/image/spray2.jpg" alt="spray" class="reveal-text scroll-reveal">
+  <img src="assets/image/spray3.jpg" alt="spray" class="reveal-text scroll-reveal">
+  <img src="assets/image/spray4.jpg" alt="spray" class="reveal-text scroll-reveal">
+</div>
+
+<div class="spray-items" style="margin-top: 20px;" class="reveal-text scroll-reveal">
+  <img src="assets/image/spray1.jpg" alt="spray" class="reveal-text scroll-reveal">
+  <img src="assets/image/spray2.jpg" alt="spray" class="reveal-text scroll-reveal">
+  <img src="assets/image/spray3.jpg" alt="spray" class="reveal-text scroll-reveal">
+  <img src="assets/image/spray4.jpg" alt="spray"class="reveal-text scroll-reveal">
+</div>
+<div>
+
+
+</div>
+</div>
+<!-- add to cart area -->
+
+<div class="head-cart reveal-text scroll-reveal" id="shopnow">
+
+  <h1 style="font-size: 36px;font-family: 'inter'; font-weight: 600; padding-bottom: 5px;">GTG Perfumes</h1>
+
+  <div style="font-family: 'inter,sans-serif';font-size: 13px; color: #032e15;">
+<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.97886 0.448242L8.45012 4.97631H13.2112L9.35941 7.77481L10.8307 12.3029L6.97886 9.50438L3.12706 12.3029L4.59832 7.77481L0.746512 4.97631H5.5076L6.97886 0.448242Z" fill="#00C950"/>
+</svg>
+<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.97886 0.448242L8.45012 4.97631H13.2112L9.35941 7.77481L10.8307 12.3029L6.97886 9.50438L3.12706 12.3029L4.59832 7.77481L0.746512 4.97631H5.5076L6.97886 0.448242Z" fill="#00C950"/>
+</svg>
+
+<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.97886 0.448242L8.45012 4.97631H13.2112L9.35941 7.77481L10.8307 12.3029L6.97886 9.50438L3.12706 12.3029L4.59832 7.77481L0.746512 4.97631H5.5076L6.97886 0.448242Z" fill="#00C950"/>
+</svg>
+
+<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.97886 0.448242L8.45012 4.97631H13.2112L9.35941 7.77481L10.8307 12.3029L6.97886 9.50438L3.12706 12.3029L4.59832 7.77481L0.746512 4.97631H5.5076L6.97886 0.448242Z" fill="#00C950"/>
+</svg>
+
+<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define clipping paths for left and right halves -->
+  <defs>
+    <clipPath id="left-half">
+      <rect x="0" y="0" width="6.97886" height="13"/>
+    </clipPath>
+    <clipPath id="right-half">
+      <rect x="6.97886" y="0" width="6.23234" height="13"/>
+    </clipPath>
+  </defs>
+  <!-- Left half of the star (green) -->
+  <path d="M6.97886 0.448242L8.45012 4.97631H13.2112L9.35941 7.77481L10.8307 12.3029L6.97886 9.50438L3.12706 12.3029L4.59832 7.77481L0.746512 4.97631H5.5076L6.97886 0.448242Z" fill="#00C950" clip-path="url(#left-half)"/>
+  <!-- Right half of the star (grey) -->
+  <path d="M6.97886 0.448242L8.45012 4.97631H13.2112L9.35941 7.77481L10.8307 12.3029L6.97886 9.50438L3.12706 12.3029L4.59832 7.77481L0.746512 4.97631H5.5076L6.97886 0.448242Z" fill="#E1E1E1" clip-path="url(#right-half)"/>
+</svg>
+<p style="position: relative;top: -18px;left: 89px;font-family: 'inter,sans-serif';">4.7 &nbsp;(999+  reviews)</p>
+</div>
+
+
+  <p style="font-size: 19.18px; line-height: 25px;font-weight: 300;font-family: inter;color: #032e15;width: 800px;">Experience the timeless allure backed by modern artistry,captured in every bottle of our fragrance.Crafted for those who seek to elevate their essence with purpose and sophistication</p>
+
+
+</div>
+
+
+<div class="main-sub-cart">
+
+
+   <!-- Subscription Plan Area -->
+<div class="subscription-options">
+  <div style="background: linear-gradient(270deg, #032E15 0%, #008236 51.92%, #00C950 100%); text-align: center; height: 43.49px; width: 800px; border-top-left-radius: 6px; border-top-right-radius: 6px;top: 20px; position: relative;">
+    <h3 style="font-family: 'Inter,sans-serif'; font-weight: 700; font-size: 20.23px; line-height: 24.27px; color: #ffffff; letter-spacing: 1px; top: 8px; position: relative;">Most Popular</h3>
+  </div>
+
+  <!-- Single Subscription -->
+  <div class="subscription-box">
+    <label style="position: relative; top: 18px;left: 10px">
+      <input type="radio" name="plan" value="Single Subscription - $99.99" data-id="single">
+      <p style="font-family: 'inter,sans-serif'; font-size: 20px; line-height: 50px; letter-spacing: .9px; font-weight: 300; color: #322d2d;margin-left: -83px;">Single Subscription</p>
+      <p style="margin-left: 395px; margin-top: 5px; right: 20px;position: relative;">$99.99 <span style="text-decoration: line-through; color: grey;">$146</span></p>
+    </label>
+    <div class="details" id="single">
+        <hr style="width: 680px; margin-left: 1px;margin-right: 20px;margin-bottom: 20px;">
+      <p style="font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: #032e15;">Choose a Fragrance</p><br>
+
+
+            <!-- best seller-->
+
+<div class="custom-box">
+  <span class="text">BEST-SELLER</span>
+</div>
+<div style="display: flex; ">
+      <div class="fragrance-option custum-boxes">
+  
+
+        <label style="padding-left: 8px;padding-top: 8px;">
+          <input type="radio" name="fragrance" value="Original">
+         <p class="original-head">Original</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Original" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option" style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance" value="Lily">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -70px;position: relative;">Lily</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Lily" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="purple-blue-filter">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option"style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance" value="Rose">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -60px;position: relative;">Rose</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Rose" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="rose-gold-filter">
+      </div>
+    </div>
+
+    &nbsp;&nbsp;
+<!-- whats inlude -->
+<div>
+
+  <p style="width: 137px; height: 20px; font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: #032e15;">What's included:</p>
+&nbsp;
+
+  <div style="display: flex;">
+  <div style="width: 166px; height: 170px;background-color:none;padding-bottom: 30px;border: 1px solid grey;border-radius: 5px;">
+    <p style="font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: #6f7577;position: relative; top:10px;left: 10px;">Every 30 Days</p>
+    <img src="assets/image/spray_sub3.png" alt="spray" style="width: 300px; height: 174px; left: -70px; position: relative;top: -15px;">
+  </div>
+
+  <div style="position: relative; top: 10px; background-color:none;width: 250px; margin-left: 20px;top: -2px;height: 170px;border: 1px solid grey; border-radius: 5px;">
+    <p style="font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: gray;padding-left: 10px;padding-top: 10px;">One Time<strong style="font-weight: 900; font-family: 'inter',sans-serif;">(Free)</strong></p>
+    <div style="top: 12px; position: relative; left: -45px;">
+    <img src="assets/image/spray_sub3.png" alt="spray" width="175px" style="position: absolute;">
+    <img src="assets/image/spray_sub3.png" alt="spray" width="175px" style="position: absolute; left: 80PX;"class="purple-blue-filter">
+    <img src="assets/image/spray_sub3.png" alt="spray" width="175px" style="position: absolute; left: 160px;" class="rose-gold-filter">
+    </div>
+  </div>
+</div>
+</div>
+
+&nbsp;
+
+
+<div style="line-height: 25px;">
+
+  <div style="display: flex;" >
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="url(#paint0_linear_17025_275)" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;">1 Bottle Shipped Monthly</p>
+</div>
+  
+
+
+
+  <div style="display: flex;">
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="url(#paint0_linear_17025_275)" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;"><strong style="font-weight: 900;">Free</strong> Sampler For Original,Lily and Rose Fragrances </p>
+</div>
+
+
+
+
+  <div style="display: flex;">
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="url(#paint0_linear_17025_275)" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p><strong style="font-family: 'inter',sans-serif;font-weight: 900;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;"> 50% OFF Shipping</strong></p>
+</div>
+
+
+
+
+
+  <div style="display: flex;">
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="url(#paint0_linear_17025_275)" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;">Pouse Or Cancel AnyTime After 3 Months Minimum </p>
+</div>
+
+
+
+
+
+
+  <div style="display: flex;">
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="#032e15" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;">28 Day Money Back Guarantee*</p>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+  </div>
+  <br>
+    </div>
+  </div>
+
+  <!-- Double Subscription -->
+  <div class="subscription-box" style="width: 800px; position: relative; left: 335px;top: -15px;">
+    <label style="position: relative; left: 10px;">
+      <input type="radio" name="plan" value="Double Subscription - $169.99" data-id="double">
+      <p style="position: relative;font-family: 'inter,sans-serif';font-size: 20px;letter-spacing: 0.9px;font-weight: 300;color: #322d2d;left: -45px;">Double Subscription</p>
+      <p style="padding-left: 380px; font-size: 17.1px; color: black; font-weight: 500;position: relative;left: -15px;">$169.99 <span style="text-decoration: line-through; color: grey;">$196</span></p>
+    </label>
+    <div class="details" id="double">
+    <hr>
+       <div style="position: relative; left: 50px;font-size: 16px;">
+
+        <br>
+      <p style="font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: #032e15;">Choose a Fragrance 1</p><br>
+
+
+            <!-- best seller-->
+
+<div class="custom-box">
+  <span class="text">BEST-SELLER</span>
+</div>
+<div style="display: flex; ">
+      <div class="fragrance-option" style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+  
+
+        <label style="padding-left: 8px;padding-top: 8px;">
+          <input type="radio" name="fragrance1" value="Original">
+         <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -39px;position: relative;">Original</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Original" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option" style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance1" value="Lily">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -69px;position: relative;">Lily</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Lily" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="purple-blue-filter">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option"style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance1" value="Rose">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -63px;position: relative;">Rose</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Rose" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="rose-gold-filter">
+      </div>
+    </div>
+
+
+<br>
+
+
+<!-- choose fragrance-2 -->
+
+
+ <p style="font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: #032e15;">Choose a Fragrance 2</p><br>
+
+
+            <!-- best seller-->
+
+<div class="custom-box">
+  <span class="text">BEST-SELLER</span>
+</div>
+<div style="display: flex; ">
+      <div class="fragrance-option" style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+  
+
+        <label style="padding-left: 8px;padding-top: 8px;">
+          <input type="radio" name="fragrance2" value="Original">
+         <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -39px;position: relative;">Original</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Original" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option" style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance2" value="Lily">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -69px;position: relative;">Lily</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Lily" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="purple-blue-filter">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option"style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance2" value="Rose">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -63px;position: relative;">Rose</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Rose" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="rose-gold-filter">
+      </div>
+    </div>
+
+
+
+
+    &nbsp;&nbsp;
+<!-- whats inlude -->
+<div>
+
+  <p style="width: 137px; height: 20px; font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: #032e15;display: inline;">What's included:</p><br>
+&nbsp;
+
+  <div style="display: flex;">
+  <div style="width: 166px; height: 170px;background-color:none;padding-bottom: 30px;border: 1px solid grey;border-radius: 5px;">
+    <p style="font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: #6f7577;position: relative; top:10px;left: 10px;">Every 30 Days</p>
+    <img src="assets/image/spray_sub3.png" alt="spray" style="width: 300px; height: 174px; left: -70px; position: relative;top: -15px;">
+  </div>
+
+  <div style="position: relative; top: 10px; background-color:none;width: 250px; margin-left: 20px;top: -2px;height: 170px;border: 1px solid grey; border-radius: 5px;">
+    <p style="font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: gray;padding-left: 10px;padding-top: 10px;">One Time<strong style="font-weight: 900; font-family: 'inter',sans-serif;">(Free)</strong></p>
+    <div style="top: 12px; position: relative; left: -45px;">
+    <img src="assets/image/spray_sub3.png" alt="spray" width="175px" style="position: absolute;">
+    <img src="assets/image/spray_sub3.png" alt="spray" width="175px" style="position: absolute; left: 80PX;"class="purple-blue-filter">
+    <img src="assets/image/spray_sub3.png" alt="spray" width="175px" style="position: absolute; left: 160px;" class="rose-gold-filter">
+    </div>
+  </div>
+</div>
+</div>
+
+&nbsp;
+
+
+<div style="line-height: 25px;">
+
+  <div style="display: flex;" >
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="#032e15" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;">1 Bottle Shipped Monthly</p>
+</div>
+  
+
+
+
+  <div style="display: flex;">
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="#032e15" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;"><strong style="font-weight: 900;">Free</strong> Sampler For Original,Lily and Rose Fragrances </p>
+</div>
+
+
+
+
+  <div style="display: flex;">
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="#032e15" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p><strong style="font-family: 'inter',sans-serif;font-weight: 900;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;"> 50% OFF Shipping</strong></p>
+</div>
+
+
+
+
+
+  <div style="display: flex;">
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="#032e15" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;">Pouse Or Cancel AnyTime After 3 Months Minimum </p>
+</div>
+
+
+
+
+
+
+  <div style="display: flex;">
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="#032e15" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;">28 Day Money Back Guarantee*</p>
+</div>
+
+
+</div>
+
+
+</div>
+    </div>
+  </div>
+
+  <!-- Try Once -->
+  <div class="subscription-box" style="width: 800px; position: relative; left: 335px;top: -15px; top: -30px;">
+    <label style="left: 10px;position: relative;top: 3px;">
+      <input type="radio" name="plan" value="Try Once - $129.99" data-id="try">
+      <p style="font-size: 20px; color: black; font-weight: 300; font-family: 'inter,sans-serif';position:relative; left: -289px;">Try Once</p>
+      <p style="position: relative; left: -20px; font-size: 16.5px; font-weight: 500;">$129.99 <span style="text-decoration: line-through; color: grey;">$156</span></p>
+    </label>
+    
+    <div class="details" id="try">
+     <hr>
+
+
+     <br>
+     <br>
+ <div class="" style="width: 200px;display: flex;gap: 30px; font-family: 'inter';">
+    <label>
+      <input type="radio" name="pland" value="single" onclick="toggleImages('single')">
+      Single
+    </label>
+    <label>
+      <input type="radio" name="pland" value="double" onclick="toggleImages('double')">
+      Double
+    </label>
+  </div>
+<br>
+      <p style="font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: #032e15;">Choose a Fragrance 1</p><br>
+
+
+            <!-- best seller-->
+
+<div class="custom-box">
+  <span class="text">BEST-SELLER</span>
+</div>
+<div style="display: flex; ">
+      <div class="fragrance-option" style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+  
+
+        <label style="padding-left: 8px;padding-top: 8px;">
+          <input type="radio" name="fragrance1" value="Original">
+         <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -40px;position: relative;">Original</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Original" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option" style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance1" value="Lily">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -70px;position: relative;">Lily</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Lily" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="purple-blue-filter">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option"style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance1" value="Rose">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -60px;position: relative;">Rose</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Rose" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="rose-gold-filter">
+      </div>
+    </div>
+
+    &nbsp;&nbsp;
+
+
+
+
+
+
+<!-- choose fragrance-2 -->
+
+
+      
+ 
+      <p style="font-family: 'inter',sans-serif; font-weight: 300; size: 16.18px; line-height: 100%;color: #032e15;">Choose a Fragrance 2</p><br>
+
+
+            <!-- best seller-->
+
+<div class="custom-box">
+  <span class="text">BEST-SELLER</span>
+</div>
+<div style="display: flex; ">
+      <div class="fragrance-option" style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+  
+
+        <label style="padding-left: 8px;padding-top: 8px;">
+          <input type="radio" name="fragrance2" value="Original">
+         <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -40px;position: relative;">Original</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Original" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option" style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance2" value="Lily">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -70px;position: relative;">Lily</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Lily" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="purple-blue-filter">
+      </div>
+
+&nbsp;&nbsp;
+
+      <div class="fragrance-option"style="width: 127.11px; height: 145.89px; top: 34.8px; border-radius: 4.95px; left: -20px; background-color: rgb(232, 231, 231);">
+        <label style="padding-left: 8px; padding-top: 8px;">
+          <input type="radio" name="fragrance2" value="Rose">
+          <p style="font-family: 'inter',sans-serif;font-weight: 300; size: 13.2px;line-height: 100%;color: grey;left: -60px;position: relative;">Rose</p>
+        </label>
+        <img src="assets/image/spray_sub3.png" alt="Rose" style="width: 264px; height: 124px;left: -70px; position: relative;top: -20px;"class="rose-gold-filter">
+      </div>
+    </div>
+
+    &nbsp;&nbsp;
+
+
+
+<div style="line-height: 25px;">
+
+  <div style="display: flex;" >
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="#032e15" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;">1 Bottle Shipped Monthly</p>
+</div>
+  
+
+
+
+
+  <div style="display: flex;">
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5822 5.21281C11.376 4.99734 11.1627 4.77531 11.0823 4.58008C11.008 4.40125 11.0036 4.10484 10.9992 3.81773C10.991 3.28398 10.9823 2.67914 10.5617 2.25859C10.1412 1.83805 9.53633 1.8293 9.00258 1.82109C8.71547 1.81672 8.41906 1.81234 8.24023 1.73797C8.04555 1.65758 7.82297 1.4443 7.6075 1.23812C7.23016 0.875547 6.80141 0.464844 6.23047 0.464844C5.65953 0.464844 5.23133 0.875547 4.85344 1.23812C4.63797 1.4443 4.41594 1.65758 4.2207 1.73797C4.04297 1.81234 3.74547 1.81672 3.45836 1.82109C2.92461 1.8293 2.31977 1.83805 1.89922 2.25859C1.47867 2.67914 1.47266 3.28398 1.46172 3.81773C1.45734 4.10484 1.45297 4.40125 1.37859 4.58008C1.2982 4.77477 1.08492 4.99734 0.87875 5.21281C0.516172 5.59016 0.105469 6.01891 0.105469 6.58984C0.105469 7.16078 0.516172 7.58898 0.87875 7.96687C1.08492 8.18234 1.2982 8.40438 1.37859 8.59961C1.45297 8.77844 1.45734 9.07484 1.46172 9.36195C1.46992 9.8957 1.47867 10.5005 1.89922 10.9211C2.31977 11.3416 2.92461 11.3504 3.45836 11.3586C3.74547 11.363 4.04187 11.3673 4.2207 11.4417C4.41539 11.5221 4.63797 11.7354 4.85344 11.9416C5.23078 12.3041 5.65953 12.7148 6.23047 12.7148C6.80141 12.7148 7.22961 12.3041 7.6075 11.9416C7.82297 11.7354 8.045 11.5221 8.24023 11.4417C8.41906 11.3673 8.71547 11.363 9.00258 11.3586C9.53633 11.3504 10.1412 11.3416 10.5617 10.9211C10.9823 10.5005 10.991 9.8957 10.9992 9.36195C11.0036 9.07484 11.008 8.77844 11.0823 8.59961C11.1627 8.40492 11.376 8.18234 11.5822 7.96687C11.9448 7.58953 12.3555 7.16078 12.3555 6.58984C12.3555 6.01891 11.9448 5.5907 11.5822 5.21281ZM10.9505 7.36148C10.6886 7.63492 10.4173 7.91766 10.2735 8.26492C10.1357 8.59852 10.1297 8.97969 10.1242 9.34883C10.1187 9.73164 10.1127 10.1325 9.94266 10.302C9.77258 10.4716 9.37445 10.4781 8.98945 10.4836C8.62031 10.4891 8.23914 10.4951 7.90555 10.6329C7.55828 10.7767 7.27555 11.048 7.00211 11.3099C6.72867 11.5719 6.44922 11.8398 6.23047 11.8398C6.01172 11.8398 5.73008 11.5708 5.45883 11.3099C5.18758 11.0491 4.90266 10.7767 4.55539 10.6329C4.2218 10.4951 3.84063 10.4891 3.47148 10.4836C3.08867 10.4781 2.68781 10.4721 2.51828 10.302C2.34875 10.132 2.34219 9.73383 2.33672 9.34883C2.33125 8.97969 2.32523 8.59852 2.18742 8.26492C2.04359 7.91766 1.77234 7.63492 1.51039 7.36148C1.24844 7.08805 0.980469 6.80859 0.980469 6.58984C0.980469 6.37109 1.24953 6.08945 1.51039 5.8182C1.77125 5.54695 2.04359 5.26203 2.18742 4.91477C2.32523 4.58117 2.33125 4.2 2.33672 3.83086C2.34219 3.44805 2.3482 3.04719 2.51828 2.87766C2.68836 2.70812 3.08648 2.70156 3.47148 2.69609C3.84063 2.69062 4.2218 2.68461 4.55539 2.5468C4.90266 2.40297 5.18539 2.13172 5.45883 1.86977C5.73227 1.60781 6.01172 1.33984 6.23047 1.33984C6.44922 1.33984 6.73086 1.60891 7.00211 1.86977C7.27336 2.13062 7.55828 2.40297 7.90555 2.5468C8.23914 2.68461 8.62031 2.69062 8.98945 2.69609C9.37227 2.70156 9.77313 2.70758 9.94266 2.87766C10.1122 3.04773 10.1187 3.44586 10.1242 3.83086C10.1297 4.2 10.1357 4.58117 10.2735 4.91477C10.4173 5.26203 10.6886 5.54477 10.9505 5.8182C11.2125 6.09164 11.4805 6.37109 11.4805 6.58984C11.4805 6.80859 11.2114 7.09023 10.9505 7.36148ZM8.7275 4.96781C8.76818 5.00844 8.80045 5.0567 8.82246 5.10981C8.84448 5.16292 8.85581 5.21985 8.85581 5.27734C8.85581 5.33484 8.84448 5.39177 8.82246 5.44488C8.80045 5.49799 8.76818 5.54624 8.7275 5.58687L5.665 8.64937C5.62437 8.69005 5.57612 8.72232 5.52301 8.74434C5.46989 8.76636 5.41296 8.77769 5.35547 8.77769C5.29797 8.77769 5.24104 8.76636 5.18793 8.74434C5.13482 8.72232 5.08657 8.69005 5.04594 8.64937L3.73344 7.33687C3.65134 7.25478 3.60523 7.14344 3.60523 7.02734C3.60523 6.91125 3.65134 6.79991 3.73344 6.71781C3.81553 6.63572 3.92687 6.5896 4.04297 6.5896C4.15907 6.5896 4.27041 6.63572 4.3525 6.71781L5.35547 7.72133L8.10844 4.96781C8.14907 4.92713 8.19732 4.89487 8.25043 4.87285C8.30354 4.85083 8.36047 4.8395 8.41797 4.8395C8.47546 4.8395 8.53239 4.85083 8.58551 4.87285C8.63862 4.89487 8.68687 4.92713 8.7275 4.96781Z" fill="#032e15" fill-opacity="0.6"/>
+<defs>
+<linearGradient id="paint0_linear_17025_275" x1="6.23047" y1="0.464844" x2="6.23047" y2="12.7148" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+&nbsp;&nbsp;
+<p style="font-family: 'inter',sans-serif;font-weight: 300;size: 14px; line-height: 21px; letter-spacing: 0.9px;color: #032e15;position: relative;top: -4px;">28 Day Money Back Guarantee*</p>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <button onclick="addToCart()" class="add-cart-btn reveal-text scroll-reveal">Add to Cart</button>
+</div>
+
+
+</div>
+
+<!-- Cart -->
+<div class="cart">
+  <h3 style="width: 400px;height: 50px;background-color: #032E15; color: #ffffff; border-radius: 20px; text-align: center;padding-top: 12px;font-size: 20px;">🛒 Your Cart</h3>
+  <br>
+  <ul id="cartItems"></ul>
+
+</div>
+
+
+
+</section>
+
+<!-- ---------------------------mobile subcribtion area ----------------------------->
+
+
+
+
+
+<!-- --------------------------- end mobile subcribtion area ----------------------------->
+
+
+<!-- the ultimate fragrance area  -->
+
+
+<section>
+
+<div class="ultimate">
+
+<img src="assets/image/image_ultimate.png" alt="ultimate-spray-img" class="ultimate-img reveal-text scroll-reveal">
+
+<div style="width: 766px;height: 732.27px;position: relative;top: -600px;position: relative;left: 620px;">
+<h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 38px; color: white;padding-bottom: 10px;letter-spacing: 1.5px;" class="reveal-text scroll-reveal">The Ultimate Fragrance</h1>
+
+<h6 style="font-size: 10px; font-family:'inter'; padding-bottom: 20px;color: white;letter-spacing: 2px;margin-left: 10px;">GTG SPECIAL EDITION</h6>
+
+<br>
+<div style="height: 514px;width: 766px;gap: 22px;" class="reveal-text scroll-reveal">
+
+  <!-- text box 1&2 -->
+
+<div style="position: relative; display: flex;gap: 20px;">
+
+<div class="grey-card">
+<svg width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-align">
+<path d="M45.4306 1.979C45.4092 1.61204 45.2537 1.26572 44.9938 1.00579C44.7339 0.745865 44.3876 0.590431 44.0206 0.569001C34.3156 0.00650123 26.5231 2.95775 23.1744 8.48525C20.9619 12.1378 20.9656 16.5778 23.1444 20.8115C21.9056 22.2852 20.9993 24.0087 20.4875 25.8646L17.4369 22.8121C18.9031 19.7503 18.8469 16.5571 17.2494 13.9078C14.7669 9.824 9.05374 7.62463 1.96061 8.05025C1.59365 8.07168 1.24733 8.22711 0.987401 8.48704C0.727475 8.74697 0.572043 9.09329 0.550612 9.46025C0.132487 16.5534 2.32436 22.2665 6.40999 24.7415C7.7606 25.5659 9.31265 26.0013 10.895 25.9996C12.4285 25.9807 13.9383 25.6174 15.3125 24.9365L20 29.624V34.9996C20 35.3974 20.158 35.779 20.4393 36.0603C20.7206 36.3416 21.1022 36.4996 21.5 36.4996C21.8978 36.4996 22.2793 36.3416 22.5606 36.0603C22.842 35.779 23 35.3974 23 34.9996V29.4702C22.9933 27.0839 23.8054 24.7675 25.3006 22.9077C27.2299 23.916 29.3696 24.4556 31.5462 24.4828C33.6507 24.4895 35.7161 23.9146 37.5144 22.8215C43.0419 19.4765 46.0006 11.684 45.4306 1.979ZM15.1362 20.5134L10.5594 15.9384C10.2758 15.6689 9.89814 15.521 9.507 15.526C9.11586 15.531 8.74215 15.6886 8.46554 15.9652C8.18894 16.2418 8.03134 16.6155 8.02633 17.0066C8.02132 17.3978 8.16931 17.7754 8.43874 18.059L13.0156 22.6359C11.2137 23.2321 9.46624 23.084 7.96436 22.1746C5.08811 20.4328 3.46061 16.3096 3.49999 10.9996C8.80811 10.9528 12.9331 12.5878 14.675 15.464C15.5844 16.9659 15.7325 18.7134 15.1362 20.5134ZM35.96 20.2584C33.4475 21.779 30.4944 21.8953 27.4944 20.6334L37.5612 10.5646C37.8427 10.2834 38.0009 9.90191 38.0011 9.50404C38.0013 9.10617 37.8434 8.72452 37.5622 8.44306C37.281 8.1616 36.8995 8.00338 36.5016 8.00321C36.1037 8.00303 35.7221 8.16091 35.4406 8.44213L25.3719 18.4996C24.1044 15.4996 24.2187 12.5446 25.7469 10.034C28.3606 5.7215 34.5594 3.3215 42.4962 3.50338C42.6762 11.4384 40.2762 17.6446 35.96 20.2584Z" fill="#FCFCFC" fill-opacity="0.7"/>
+</svg>
+
+<h4 class="lorem-head">Lorem ipsum</h4>
+
+<p class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+</div>
+<div class="grey-card">
+  <svg width="45" height="33" viewBox="0 0 45 33" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-align">
+<path d="M44.8913 11.9375L42.2663 5.375C42.0436 4.81976 41.6593 4.34418 41.1632 4.00987C40.667 3.67557 40.082 3.49794 39.4838 3.5H33V2C33 1.60218 32.842 1.22064 32.5607 0.93934C32.2794 0.658036 31.8978 0.5 31.5 0.5H3C2.20435 0.5 1.44129 0.81607 0.87868 1.37868C0.31607 1.94129 0 2.70435 0 3.5V24.5C0 25.2956 0.31607 26.0587 0.87868 26.6213C1.44129 27.1839 2.20435 27.5 3 27.5H6.1875C6.51795 28.7906 7.26855 29.9346 8.32097 30.7515C9.37338 31.5684 10.6677 32.0118 12 32.0118C13.3323 32.0118 14.6266 31.5684 15.679 30.7515C16.7315 29.9346 17.482 28.7906 17.8125 27.5H27.1875C27.518 28.7906 28.2686 29.9346 29.321 30.7515C30.3734 31.5684 31.6677 32.0118 33 32.0118C34.3323 32.0118 35.6266 31.5684 36.679 30.7515C37.7315 29.9346 38.4821 28.7906 38.8125 27.5H42C42.7957 27.5 43.5587 27.1839 44.1213 26.6213C44.6839 26.0587 45 25.2956 45 24.5V12.5C45.0005 12.3072 44.9636 12.1162 44.8913 11.9375ZM33 6.5H39.4838L41.2838 11H33V6.5ZM3 3.5H30V15.5H3V3.5ZM12 29C11.4067 29 10.8266 28.8241 10.3333 28.4944C9.83994 28.1648 9.45542 27.6962 9.22836 27.1481C9.0013 26.5999 8.94189 25.9967 9.05764 25.4147C9.1734 24.8328 9.45912 24.2982 9.87868 23.8787C10.2982 23.4591 10.8328 23.1734 11.4147 23.0576C11.9967 22.9419 12.5999 23.0013 13.1481 23.2284C13.6962 23.4554 14.1648 23.8399 14.4944 24.3333C14.8241 24.8266 15 25.4067 15 26C15 26.7956 14.6839 27.5587 14.1213 28.1213C13.5587 28.6839 12.7957 29 12 29ZM27.1875 24.5H17.8125C17.482 23.2094 16.7315 22.0654 15.679 21.2485C14.6266 20.4316 13.3323 19.9882 12 19.9882C10.6677 19.9882 9.37338 20.4316 8.32097 21.2485C7.26855 22.0654 6.51795 23.2094 6.1875 24.5H3V18.5H30V20.8081C29.3103 21.2068 28.7065 21.7384 28.2237 22.3722C27.7409 23.0059 27.3887 23.7291 27.1875 24.5ZM33 29C32.4067 29 31.8266 28.8241 31.3333 28.4944C30.8399 28.1648 30.4554 27.6962 30.2284 27.1481C30.0013 26.5999 29.9419 25.9967 30.0576 25.4147C30.1734 24.8328 30.4591 24.2982 30.8787 23.8787C31.2982 23.4591 31.8328 23.1734 32.4147 23.0576C32.9967 22.9419 33.5999 23.0013 34.1481 23.2284C34.6962 23.4554 35.1648 23.8399 35.4944 24.3333C35.8241 24.8266 36 25.4067 36 26C36 26.7956 35.6839 27.5587 35.1213 28.1213C34.5587 28.6839 33.7957 29 33 29ZM42 24.5H38.8125C38.4781 23.2125 37.7261 22.0723 36.6742 21.258C35.6224 20.4437 34.3302 20.0013 33 20V14H42V24.5Z" fill="#FCFCFC" fill-opacity="0.7"/>
+</svg>
+<h4 class="lorem-head">Lorem ipsum</h4>
+<p class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+
+</div>
+
+
+</div>
+
+&nbsp;
+<!-- text box 3&4 -->
+<div style="position: relative; display: flex; gap: 20px;">
+
+
+<div class="grey-card">
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-align">
+<path d="M20 0.5C16.1433 0.5 12.3731 1.64366 9.16639 3.78634C5.95963 5.92903 3.46027 8.97451 1.98436 12.5377C0.508449 16.1008 0.122284 20.0216 0.874696 23.8043C1.62711 27.5869 3.4843 31.0615 6.21143 33.7886C8.93855 36.5157 12.4131 38.3729 16.1957 39.1253C19.9784 39.8777 23.8992 39.4916 27.4623 38.0156C31.0255 36.5397 34.071 34.0404 36.2137 30.8336C38.3564 27.6269 39.5 23.8567 39.5 20C39.4941 14.8301 37.4377 9.87366 33.782 6.21799C30.1263 2.56233 25.1699 0.505955 20 0.5ZM36.5 20C36.5013 21.5217 36.2912 23.0362 35.8756 24.5H28.655C29.115 21.5176 29.115 18.4824 28.655 15.5H35.8756C36.2912 16.9638 36.5013 18.4783 36.5 20ZM15.125 27.5H24.875C23.9145 30.6474 22.247 33.5334 20 35.9375C17.7539 33.5328 16.0865 30.6469 15.125 27.5ZM14.3938 24.5C13.8788 21.5221 13.8788 18.4779 14.3938 15.5H25.6213C26.1362 18.4779 26.1362 21.5221 25.6213 24.5H14.3938ZM3.50001 20C3.4987 18.4783 3.70884 16.9638 4.12438 15.5H11.345C10.885 18.4824 10.885 21.5176 11.345 24.5H4.12438C3.70884 23.0362 3.4987 21.5217 3.50001 20ZM24.875 12.5H15.125C16.0855 9.35264 17.753 6.46659 20 4.0625C22.2461 6.46723 23.9135 9.35307 24.875 12.5ZM34.6869 12.5H28.0081C27.1664 9.4117 25.7476 6.51064 23.8269 3.95C26.1476 4.50749 28.3203 5.56021 30.1961 7.03598C32.0719 8.51175 33.6064 10.3757 34.6944 12.5H34.6869ZM16.1731 3.95C14.2524 6.51064 12.8337 9.4117 11.9919 12.5H5.30563C6.39364 10.3757 7.92814 8.51175 9.80392 7.03598C11.6797 5.56021 13.8524 4.50749 16.1731 3.95ZM5.30563 27.5H11.9919C12.8337 30.5883 14.2524 33.4894 16.1731 36.05C13.8524 35.4925 11.6797 34.4398 9.80392 32.964C7.92814 31.4882 6.39364 29.6243 5.30563 27.5ZM23.8269 36.05C25.7476 33.4894 27.1664 30.5883 28.0081 27.5H34.6944C33.6064 29.6243 32.0719 31.4882 30.1961 32.964C28.3203 34.4398 26.1476 35.4925 23.8269 36.05Z" fill="#FCFCFC" fill-opacity="0.7"/>
+</svg>
+<h4 class="lorem-head">Lorem ipsum</h4>
+<p class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+
+</div>
+<div class="grey-card">
+  <svg width="42" height="37" viewBox="0 0 42 37" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-align">
+<path d="M30.375 0.5C26.5031 0.5 23.1131 2.165 21 4.97937C18.8869 2.165 15.4969 0.5 11.625 0.5C8.54292 0.503474 5.58808 1.72936 3.40872 3.90872C1.22936 6.08808 0.00347388 9.04292 0 12.125C0 25.25 19.4606 35.8737 20.2894 36.3125C20.5078 36.43 20.752 36.4915 21 36.4915C21.248 36.4915 21.4922 36.43 21.7106 36.3125C22.5394 35.8737 42 25.25 42 12.125C41.9965 9.04292 40.7706 6.08808 38.5913 3.90872C36.4119 1.72936 33.4571 0.503474 30.375 0.5ZM21 33.275C17.5763 31.28 3 22.1919 3 12.125C3.00298 9.83842 3.91264 7.64635 5.52949 6.02949C7.14635 4.41264 9.33842 3.50298 11.625 3.5C15.2719 3.5 18.3337 5.4425 19.6125 8.5625C19.7255 8.83762 19.9178 9.07293 20.1648 9.23853C20.4119 9.40413 20.7026 9.49255 21 9.49255C21.2974 9.49255 21.5881 9.40413 21.8352 9.23853C22.0822 9.07293 22.2745 8.83762 22.3875 8.5625C23.6662 5.43687 26.7281 3.5 30.375 3.5C32.6616 3.50298 34.8537 4.41264 36.4705 6.02949C38.0874 7.64635 38.997 9.83842 39 12.125C39 22.1769 24.42 31.2781 21 33.275Z" fill="#FCFCFC" fill-opacity="0.7"/>
+</svg>
+<h4 class="lorem-head">Lorem ipsum</h4>
+<p class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<br>
+<br>
+<button type="button" class="btn-velvet reveal-text scroll-reveal">Try Velvet Whisper Today</button>
+
+</div>
+
+</div>
+</section>
+
+
+
+
+<!-- subcribe and save area -->
+
+<section>
+
+  <div class="main-sub">
+    <img src="assets/image/spray8.jpg" alt="sub-img" width="1300px" class="sub-img-bg reveal-text scroll-reveal">
+
+
+    <div style="position: relative;top: -450px;left: 90px;">
+      <h6 style="font-family: 'inter,sans-serif';font-weight: 400;font-size: 12.43px; line-height: 100%;line-height: 3.14px;color: white;top: -80px;position: relative;letter-spacing: 1px;">SUBSCRIPTION</h6>
+    
+    <h1 style="width: 553px;height: 100px;font: 300;font-size: 47.43px;line-height: 100%;color: white;font-family: 'inter';font-weight: 300;" class="reveal-text scroll-reveal">
+      Subscribe & save <strong style="font-weight: 800;">20%</strong> on every perfume
+    </h1>
+    
+   <div style="width: 517px;height: 112.54px;padding-top: 10px;">
+
+    <div style="display: flex;gap: 7px;">
+    <div class="green-pill">Lorem Ipsum</div>
+    <div class="green-pill">Lorem Ipsum</div>
+    <div class="green-pill">Lorem Ipsum</div>
+</div>
+
+    <div style="display: flex;gap: 7px;padding-top: 7px;">
+    <div class="green-pill">Lorem Ipsum</div>
+    <div class="green-pill">Lorem Ipsum</div>
+    <div class="green-pill">Lorem Ipsum</div>
+</div>
+   </div>
+<br>
+<br>
+   <button type="button" class="btn-sub-now reveal-text scroll-reveal">Subscribe Now</button>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- our collection area -->
+
+
+
+
+
+<section style="position: relative;top: -900px;left: 70px;" class="signature">
+
+  <div style="width: 626px;height: 505px;">
+
+
+
+  
+  <div class="text-area-container" id="blog">
+
+      <h4 style="width: 626px; font-family: 'inter';font-size: 40px;font-weight: 600;" class="reveal-text scroll-reveal">Our Collection</h4>
+      <br>
+  <details>
+    <br>
+    <summary>Signature Scents</summary>
+    <br>
+   
+    <p>Indulge in the timeless elegance of our signature fragrance. A harmonious blend of floral notes, warm amber, and a hint of spice, this perfume leaves a lasting impression wherever you go.</p>
+  </details>
+
+  <details>
+    <br>
+    <summary>Signature Scents</summary>
+    <br>
+
+    <p>Indulge in the timeless elegance of our signature fragrance. A harmonious blend of floral notes, warm amber, and a hint of spice, this perfume leaves a lasting impression wherever you go.</p>
+  </details>
+
+  <details>
+    <br>
+    <summary>Signature Scents</summary>
+    <br>
+    
+    <p>Indulge in the timeless elegance of our signature fragrance. A harmonious blend of floral notes, warm amber, and a hint of spice, this perfume leaves a lasting impression wherever you go.</p>
+  </details>
+
+  <details>
+    <br>
+    <summary>Signature Scents</summary>
+  
+    <br>
+    <p>Indulge in the timeless elegance of our signature fragrance. A harmonious blend of floral notes, warm amber, and a hint of spice, this perfume leaves a lasting impression wherever you go.</p>
+  </details>
+</div>
+
+</div>
+
+
+
+
+</section>
+
+
+<!-- gtg perfumes gallery area -->
+
+<section class="gtg-slider-section">
+  <div class="gtg-slider-container">
+    <img id="gtg-main-image" src="assets/image/spray7.jpg" alt="Perfume" class="gtg-slider-image"/>
+
+    <!-- Navigation Arrows -->
+    <button class="gtg-arrow gtg-arrow-left" onclick="gtgShowPrevImage()">🡐</button>
+    <button class="gtg-arrow gtg-arrow-right" onclick="gtgShowNextImage()">🡒</button>
+
+
+
+    <!-- Dots -->
+    <div class="gtg-dots-wrapper">
+      <span class="gtg-dot" onclick="gtgJumpToImage(0)"></span>
+      <span class="gtg-dot" onclick="gtgJumpToImage(1)"></span>
+      <span class="gtg-dot" onclick="gtgJumpToImage(2)"></span>
+      <span class="gtg-dot" onclick="gtgJumpToImage(3)"></span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ------------------------------------------------persentage counting area------------------------------------------------------------------->
+
+
+
+
+
+
+
+<section class="gtgcount-section" style="position: relative;top: -1650px;">
+    <div class="gtgcount-box">
+      <div class="gtgcount-number" data-gtgcount="84">0%</div>
+      <p >Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
+    </div>
+    <div class="gtgcount-box">
+      <div class="gtgcount-number" data-gtgcount="78">0%</div>
+      <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
+    </div>
+    <div class="gtgcount-box">
+      <div class="gtgcount-number" data-gtgcount="89">0%</div>
+      <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
+    </div>
+    <div class="gtgcount-box">
+      <div class="gtgcount-number" data-gtgcount="90">0%</div>
+      <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- why gtg is #1 one choice table area -->
+
+
+
+<div style="position: relative;margin-top: -1600px;" class="gtg-#1">
+
+<p style="text-align: center;padding-bottom: 50px; font-size: 30px;">---</p>
+<section class="gtg-tab">
+  <table>
+    <h3 style="text-align: center;font-size: 36px;line-height: 100%; font-weight: 600;font-family: 'inter';padding-bottom: 60px;" class="reveal-text scroll-reveal">Why GTG is the #1 Choice</h3>
+
+    <thead>
+      <tr>
+        <th>Quantities</th>
+        <th style="font-family: 'inter';font-size: 17px;font-weight: 100;"><img class="reveal-text scroll-reveal" src="assets/image/spray8.jpg" alt="spray" width="100px" height="80px" style="border-radius: 17px;margin-top: 15px;"><br><br>GTG</th>
+        <th style="font-size: 11px;"><img class="reveal-text scroll-reveal" src="assets/image/spray4.jpg" alt="spray" width="100px" height="80px" style="border-radius: 17px;"><br><br>Arose</th>
+        <th style="font-size: 11px;"><img class="reveal-text scroll-reveal" src="assets/image/spray2.jpg" alt="spray" width="100px" height="80px" style="border-radius: 17px;"><br><br>Bella</th>
+        <th style="font-size: 11px;"><img class="reveal-text scroll-reveal" src="assets/image/spray3.jpg" alt="spray" width="100px" height="80px" style="border-radius: 17px;"><br><br>Daisies</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Potency Concentration</td>
+        <td>10x</td>
+        <td>1x</td>
+        <td>1x</td>
+        <td>10x</td>
+      </tr>
+      <tr>
+        <td>Longevity</td>
+        <td><span class="gtg-check">✔</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Sillage</td>
+        <td><span class="gtg-check">✔</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+      </tr>
+      <tr>
+        <td>Bottle Design Score</td>
+        <td>9</td>
+        <td>5</td>
+        <td>6</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Blend and Harmony</td>
+        <td><span class="gtg-check">✔</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+      </tr>
+      <tr>
+        <td>Skin Compatibility</td>
+        <td><span class="gtg-check">✔</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+      </tr>
+      <tr>
+        <td>Scent Profile</td>
+        <td><span class="gtg-check">✔</span></td>
+        <td><span class="gtg-check">✔</span></td>
+        <td><span class="gtg-check">✔</span></td>
+        <td><span class="gtg-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Price vs. Quality</td>
+        <td><span class="gtg-check">✔</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-cross">✖</span></td>
+        <td><span class="gtg-check">✔</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+  <br>
+
+  <button type="button" class="btn-try-it reveal-text scroll-reveal">Try it Risk-Free</button>
+</section>
+</div>
+
+
+
+<!-- img-thumb-with play icon -->
+
+<section class="img-play-icon">
+<div>
+  <img class="reveal-text scroll-reveal" src="assets/image/banner_bottom-img.jpg" alt="spray" style="width: 1380px;height: 586px;border-radius: 15px;margin-left: 50px;margin-top: 80px;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: relative; left:700px;top:-350px;">
+<circle cx="30" cy="30" r="30" fill="white"/>
+<path d="M38.6933 28.1427C40.1114 28.9064 40.1114 30.9405 38.6933 31.7042L24.6978 39.2412C23.3503 39.9669 21.7162 38.991 21.7162 37.4605L21.7162 22.3864C21.7162 20.856 23.3503 19.88 24.6978 20.6057L38.6933 28.1427Z" fill="url(#paint0_linear_625_2568)"/>
+<defs>
+<linearGradient id="paint0_linear_625_2568" x1="42" y1="29.9235" x2="21.7162" y2="29.9235" gradientUnits="userSpaceOnUse">
+<stop stop-color="#032E15"/>
+<stop offset="1" stop-color="#016630"/>
+</linearGradient>
+</defs>
+</svg>
+
+</div>
+
+
+
+<div id="aboutus">
+
+<h1 style="width: 421px; height: 44px; font-family: 'inter';font-weight: 600;font-size: 36px;line-height: 100%;color: #032e15;margin-left: 52px;" class="reveal-text scroll-reveal">From the the Founders</h1><br>
+<button class="reveal-text scroll-reveal" type="button" style="width: 137px; height: 56px;border-radius: 505px;background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+ font-size: 20px;margin-left: 52px;">About Us</button>
+<p style="font-family: 'inter';font-weight: 300;line-height: 100%;width: 665px;height: 72px;color: #032e15;margin-left:650px;top: -115px;position: relative;font-size: 18px;" class="reveal-text scroll-reveal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod </p>
+</div>
+</section>
+
+
+
+
+<!-- customers reviews -->
+
+
+<section class="revwSec_826">
+  <h2 style="font-family: 'inter';font-weight: 600;font-size: 36px;line-height: 100%;width: 542px;height: 44px;margin-left: 50px;color: #032E15;" class="reveal-text scroll-reveal">What our customers are saying</h2>
+  <p class="subheading">Real people, real reviews.</p>
+
+  <div class="revwSliderWrap_493">
+    <div class="revwNav_177">
+      <button class="revwArrow_988" onclick="moveRevwSlide(-1)">←</button>
+      <button class="revwArrow_988" onclick="moveRevwSlide(1)">→</button>
+    </div>
+
+    <div class="revwSlider_125">
+      <div class="revwTrack_711" id="revwTrackElem">
+        <!-- cards -->
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+
+        <div class="revwCard_337">
+          <div class="revwStars_204">★★★★★</div>
+          <p>"Amazing scent, lasts all day!"</p>
+          <div class="revwAuthor_119">
+            <div class="revwAvatar_432"></div>
+            <div class="revwInfo_501"><strong>John Doe</strong><span>Designer</span></div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="revwDots_742" id="revwDotsElem"></div>
+</section>
+
+
+
+
+<!-- FAQs check area -->
+
+
+
+<section class="gtgFaq-section">
+  <div class="gtgFaq-left">
+    <h2 style="font-weight: 300;font-family: 'inter';margin-top: 30px;">FAQs</h2>
+    <p>If you have any question that isn’t answered in our FAQs, we’d love to hear from you!</p>
+    <button class="reveal-text scroll-reveal">Get In Touch</button>
+  </div>
+
+  <div class="gtgFaq-right">
+    <div class="gtgFaq-item">
+      <div class="gtgFaq-question">
+        <span>Lorem ipsum dolor sit amet?</span>
+        <span class="gtgFaq-icon">+</span>
+      </div>
+      <div class="gtgFaq-answer">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus.
+      </div>
+    </div>
+
+    <div class="gtgFaq-item">
+      <div class="gtgFaq-question">
+        <span>Curabitur aliquet quam id dui posuere blandit?</span>
+        <span class="gtgFaq-icon">+</span>
+      </div>
+      <div class="gtgFaq-answer">
+        Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt.
+      </div>
+    </div>
+
+    <div class="gtgFaq-item">
+      <div class="gtgFaq-question">
+        <span>Donec rutrum congue leo eget malesuada?</span>
+        <span class="gtgFaq-icon">+</span>
+      </div>
+      <div class="gtgFaq-answer">
+        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+      </div>
+    </div>
+
+    <div class="gtgFaq-item">
+      <div class="gtgFaq-question">
+        <span>Quisque velit nisi pretium ut lacinia?</span>
+        <span class="gtgFaq-icon">+</span>
+      </div>
+      <div class="gtgFaq-answer">
+        Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+      </div>
+    </div>
+
+    <div class="gtgFaq-item">
+      <div class="gtgFaq-question">
+        <span>Proin eget tortor risus?</span>
+        <span class="gtgFaq-icon">+</span>
+      </div>
+      <div class="gtgFaq-answer">
+        Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit.
+      </div>
+    </div>
+
+   <p style="margin-right: 230px;"><a class="gtgFaq-seeall" href="#">See All FAQ’s</a></p> 
+  </div>
+
+</section>
+<!-- subcribe area -->
+<section style="margin-top: 100px;" class="sub-img-area">
+<div>
+  <img class="reveal-text scroll-reveal" src="assets/image/banner_img.png" width="1350px" style="margin-left: 60px; border-radius: 30px;height: 640px;z-index: -1;filter: brightness(.5);">
+</div>
+
+
+   <div class="gtg-subscribe-content" style="filter:brightness(1);">
+      <h2 style="font-family: 'inter';font-weight: 300;font-size: 47px;line-height: 100%;color: #ffffff;z-index: 1;">Lorem ipsum dolor sit amet?</h2><br><br>
+      <p style="font-size: 28px;font-weight: 300;line-height: 150%;color: #ffffff;margin-left: 130px;z-index: 1; font-family: 'inter';">Lorem ipsum dolor sit amet?</p><br><br>
+    <form class="gtg-subscribe-form">
+  <input
+    type="email"
+    class="input-subscribe-white"
+    placeholder="Your email"
+    required
+  /><br/><br>
+  <button type="submit" class="btn-rounded-outline reveal-text scroll-reveal">Subscribe</button>
+</form>
+    </div>
+</section>
+
+
+
+  <!-- Footer -->
+<footer class="gtg-footer" id="contact">
+  <div class="gtg-footer-container">
+    <!-- Logo and links -->
+    <div class="gtg-footer-left">
+      <h2 class="gtg-footer-logo">GTG</h2>
+      <div class="gtg-footer-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Fragrances</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="gtg-footer-social">
+          
+          
+          <li><a href="#"><svg width="19" height="19" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.7687 11.1415C20.7687 5.52215 16.2411 0.966797 10.6558 0.966797C5.07066 0.966797 0.542969 5.52215 0.542969 11.1415C0.542969 16.2199 4.24109 20.4292 9.07571 21.1926V14.0826H6.50799V11.1415H9.07571V8.89987C9.07571 6.34984 10.5856 4.94128 12.8954 4.94128C14.002 4.94128 15.1592 5.14001 15.1592 5.14001V7.64394H13.8841C12.6279 7.64394 12.236 8.4283 12.236 9.23296V11.1415H15.0407L14.5924 14.0826H12.236V21.1926C17.0707 20.4292 20.7687 16.2201 20.7687 11.1415Z" fill="white"/>
+</svg>
+&nbsp;<h6 class="custom-label-style">Facebook</h6></a></li>
+          <li><a href="#"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.7014 0.429688H5.61113C2.81854 0.429688 0.554688 2.69354 0.554688 5.48613V13.5764C0.554688 16.369 2.81854 18.6329 5.61113 18.6329H13.7014C16.494 18.6329 18.7579 16.369 18.7579 13.5764V5.48613C18.7579 2.69354 16.494 0.429688 13.7014 0.429688ZM16.9881 13.5764C16.9826 15.3893 15.5143 16.8576 13.7014 16.8631H5.61113C3.79824 16.8576 2.32999 15.3893 2.32444 13.5764V5.48613C2.32999 3.67324 3.79824 2.20499 5.61113 2.19944H13.7014C15.5143 2.20499 16.9826 3.67324 16.9881 5.48613V13.5764ZM14.4599 5.73895C15.0184 5.73895 15.4712 5.28618 15.4712 4.72766C15.4712 4.16915 15.0184 3.71637 14.4599 3.71637C13.9014 3.71637 13.4486 4.16915 13.4486 4.72766C13.4486 5.28618 13.9014 5.73895 14.4599 5.73895ZM9.65628 4.98048C7.14295 4.98048 5.10548 7.01795 5.10548 9.53128C5.10548 12.0446 7.14295 14.0821 9.65628 14.0821C12.1696 14.0821 14.2071 12.0446 14.2071 9.53128C14.2098 8.3235 13.7312 7.16443 12.8771 6.31041C12.0231 5.45639 10.8641 4.97779 9.65628 4.98048ZM6.87524 9.53128C6.87524 11.0672 8.12034 12.3123 9.65628 12.3123C11.1922 12.3123 12.4373 11.0672 12.4373 9.53128C12.4373 7.99534 11.1922 6.75024 9.65628 6.75024C8.12034 6.75024 6.87524 7.99534 6.87524 9.53128Z" fill="white"/>
+</svg>
+<h6 class="custom-label-style"> Instagram</h6></a></li>
+          <li><a href="#"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.8908 0.892578H17.6821L11.5839 7.74648L18.7579 17.0732H13.1408L8.74117 11.4166L3.7071 17.0732H0.91414L7.43667 9.74216L0.554688 0.892578H6.31443L10.2913 6.06291L14.8908 0.892578ZM13.9111 15.4302H15.4578L5.47401 2.44923H3.81427L13.9111 15.4302Z" fill="white"/>
+</svg>
+<h6 class="custom-label-style">X</h6></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="gtg-footer-right">
+      <h4 class="gtg-footer-heading">Join our newsletter to stay up to date on features and releases.</h4>
+      <form class="gtg-footer-form">
+        <input type="email" placeholder="Enter your email" required />&nbsp;&nbsp;
+        <button class="reveal-text scroll-reveal" type="submit">Subscribe</button>
+      </form>
+      <p class="gtg-footer-note">
+        By subscribing you agree to with our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+<script>
+  document.querySelectorAll('input[name="plan"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('.subscription-box').forEach(box => {
+        box.classList.remove('active');
+      });
+      const selected = radio.closest('.subscription-box');
+      if (selected) {
+        selected.classList.add('active');
+      }
+    });
+  });
+
+  function addToCart() {
+    const selectedPlan = document.querySelector('input[name="plan"]:checked');
+    if (!selectedPlan) {
+      alert("Please select a subscription plan.");
+
+      return;
+    }
+    let itemText = selectedPlan.value;
+    if (selectedPlan.getAttribute("data-id") === "single") {
+      const fragrance = document.querySelector('input[name="fragrance"]:checked');
+      if (!fragrance) {
+        alert("Please select a fragrance for Single Subscription.");
+        return;
+      }
+      itemText += ` - Fragrance: ${fragrance.value}`;
+    }
+    const cartList = document.getElementById("cartItems");
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${itemText}
+      <button class="delete-btn" onclick="this.parentElement.remove()">❌</button>
+    `;
+    cartList.appendChild(li);
+  }
+</script>
+
+
+<script src="js/script.js">
+</script>
+
+
+
+  </body>
+</html>
